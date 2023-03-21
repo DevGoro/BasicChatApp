@@ -18,7 +18,11 @@ function checkAuthor (author) {
 function on_message(author, message, chat) {
     var collectedStars = []
 
+    // 1. Stern: firstMessage ##############################################
+
     collectedStars.push("firstMessage")
+
+    // 2. Stern: stringFunctions ###########################################
 
     if (message.startsWith("Java")) {
         if (message.endsWith("script")) {
@@ -26,11 +30,15 @@ function on_message(author, message, chat) {
         }
     }
 
+    // 3. Stern: time #####################################################
+
     if (message.startsWith("!time")) {
         var now = new Date()
         chat.emit("message", { name: "Server", message: now.toUTCString()})
         collectedStars.push("time")
     }
+
+    // 4. Stern: longMessage ###############################################
 
     if (checkAuthor(author)) {
         var a = 0
@@ -43,6 +51,8 @@ function on_message(author, message, chat) {
             collectedStars.push("longMessage")
         }
         
+        // 5. Stern: quickMath ############################################
+
         if (5 - message <= 0) {
             collectedStars.push("quickMath")
         }
