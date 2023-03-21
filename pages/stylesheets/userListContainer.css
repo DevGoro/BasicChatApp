@@ -1,0 +1,35 @@
+div.userListContainer {
+    min-width: 200px;
+    width: 25%;
+    display: flex;
+    position: fixed;
+    transition: 0.5s;
+}
+
+div.userListContainer img {
+    margin: 5px;
+}
+
+div.userListContainer ul li {
+    list-style-type: none;
+}
+
+div.userListContainer div.userList {
+    border-left-style: solid;
+    background-color: white;
+    width: 100%
+}
+
+div.userListContainer div.userList h1 {
+    margin: 5px;
+}
+
+div.userListContainer div.userList ul li {
+    margin: 5px;
+}
+
+@media screen and (max-width: 500px) {
+    div.userListContainer {
+        width: 50%;
+    }
+}

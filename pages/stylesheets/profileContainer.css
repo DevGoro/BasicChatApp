@@ -1,0 +1,13 @@
+div.profileContainer {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+div.profileContainer img {
+    margin-left: 20px;
+}
+
+#editProfile {
+    cursor: pointer;
+}

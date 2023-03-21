@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/userListContainer.css">
+    <link rel="stylesheet" href="stylesheets/profileContainer.css">
+    <link rel="stylesheet" href="stylesheets/chatBox.css">
+    <link rel="stylesheet" href="stylesheets/github.css">
+    <title>BasicChatApp</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .keyboard {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<script defer src="./javascript/userList.js"></script>
+<script defer src="/socket.io/socket.io.js"></script>
+<script defer src="./javascript/websocket.js"></script>
+<script defer src="./javascript/keyboardPadding.js"></script>
+<script defer src="./javascript/editProfile.js"></script>
+
+    <div id="github">
+        <a href="https://github.com/DevGoro/BasicChatApp"><img src="./images/github.svg"></a>
+        <a href="https://github.com/DevGoro/BasicChatApp/blob/main/utils/eastereggs.js" target="_blank"><img src="./images/award.svg"></a>
+    </div>
+
+    <div class="userListContainer" id="userListContainer">
+        <img id="userListBurger" src="./images/menu.svg" width="30" height="30">
+        <div class="userList">
+            <h1>User</h1>
+            <ul id="userListUL"></ul>
+        </div>
+    </div>
+
+    <div class="profileContainer">
+        <img src="./images/user.svg">
+        <h1 id="profileName"></h1>
+        <img id="editProfile" src="./images/edit.svg">
+    </div>
+
+    <div id="chatBox"></div>
+    <form id="sendForm">
+        <input type="text" autocomplete="off" id="messageInput">
+        <button type="submit" id="sendButton">Send</button>
+    </form>
+    <div id="keyboardPadding"></div>
+</body>
+</html>
